@@ -19,7 +19,6 @@ Select gm_naam,   a_inw20,
 
 
 
------Rommelbak----
-
+-----Rommelbak--------
 ---a_inw20 * 100/(SELECT SUM(a_inw20) FROM cte_populatie) as 'Percentage of Total20',
 ---(INTO NewTable)
