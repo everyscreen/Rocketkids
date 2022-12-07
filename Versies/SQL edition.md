@@ -10,11 +10,12 @@ Ons advies om de kosten laag te houden is door de SQL express editie te download
 https://www.microsoft.com/nl-nl/sql-server/sql-server-downloads
 De express editie is niet alleen  gratis, maar goed te gebruiken op locale computers.
 Doorloop de installatie en kies voor basic indien u alleen de standaard functies wilt gebruiken.
+Kies een naam  voor de database en ga naar stap 2
 
 ###Requirements SQL express omgeving:
 De computer dient op het zelfde subnet te zitten als voor iedereen die de rapportage wilt laden, tenzij je webservices wilt gebruiken.
 De computer heeft een statisch ip adres nodig op het netwerk
-De bovenste requirements gelden niet als je alleen met de localhost wilt verbinden. IP:127.0.0.1 Resolutionname:localhost
+De bovenste requirements gelden niet als je alleen met de localhost wilt verbinden. IP:127.0.0.1 Resolutionname:computernaam
 Minimaal 10GB aan schijf geheugen voor de database.
 
 Verdere specificaties voor de SQL express omgeving:
@@ -33,4 +34,10 @@ All other editions: At least 4 GB and should be increased as database size incre
 Processor Speed	Minimum: x64 Processor: 1.4 GHz
 Recommended: 2.0 GHz or faster
 Processor Type	x64 Processor: AMD Opteron, AMD Athlon 64, Intel Xeon with Intel EM64T support, Intel Pentium IV with EM64T support
+
+##2. Hoe verbind ik met mijn database
+Download SQL servermanagementstudio SMSS https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16
+Wanneer u de installatie voltooid heeft kunt u uw  eigen computernaam invullen als server. Hiervoor moet de SQL server wel actief zijn na installatie
+
+##3. importeren database
 
