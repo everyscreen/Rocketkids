@@ -15,7 +15,7 @@ Packages welke nodig zijn voor de uitvoering
 
 ## Algoritmes
 Er zijn verschillende machine learning-algoritmes die geschikt zijn voor het binair classificeren van data.
-voor dit project heb ik 3 verschillende algoritmes getest opdezelfde testdata. Hieronder geef ik een samenvatting weer en de accuracy score van het algoritme.
+voor dit project heb ik 4 verschillende algoritmes getest opdezelfde testdata. Hieronder geef ik een samenvatting weer en de accuracy score van het algoritme.
 
 ### KNN neigbors algoritme
 K-nearest neighbors (KNN): Dit algoritme werkt door te kijken naar de K (meestal 5 of 10) "dichtstbijzijnde" datapunten
