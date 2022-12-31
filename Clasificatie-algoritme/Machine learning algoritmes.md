@@ -35,4 +35,13 @@ Het is een krachtig algoritme dat goede prestaties kan behalen, vooral als de da
 
 Accuracy op testdata: 75% - 78%
 
+###Decision tree
+Dit algoritme bouwt een boomstructuur met beslissingspunten op basis van de kenmerken van de data, 
+zodat het gemakkelijk is om nieuwe datapunten te classificeren.
+
+Accuracy op testdata 94% - 97%
+
+##Advies
+
+
 
