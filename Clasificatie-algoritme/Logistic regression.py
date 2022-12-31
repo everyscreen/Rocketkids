@@ -8,7 +8,20 @@ from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix #test
 from sklearn.metrics import accuracy_score #test
 
-dataset = pd.read_excel(r'C:\Users\mkolb\Documents\Word documents\HBO ICT\Semester 3\datasets\MLSampledataset.xlsx')
+server = 'tcp:marlies.database.windows.net'
+database = 'rocketdb2'
+username = 'rocketadmin'
+password = 'Marlies123!'
+driver= '{ODBC Driver 17 for SQL Server}'
+conn = pyodbc.connect('DRIVER=' + driver + ';SERVER=' +
+    server + ';PORT=1433;DATABASE=' + database +
+    ';UID=' + username + ';PWD=' + password)
+
+cursor = conn.cursor()
+
+query = "SELECT * FROM [dbo].[MLkindplaats_kids_testset]"
+dataset = pd.read_sql(query, conn)
+
 print(dataset.head())
 
 sns.countplot('column_1', hue='WINorLOSS', data=df)
