@@ -9,7 +9,20 @@ from sklearn import tree #clasificatie algoritme
 from sklearn.metrics import confusion_matrix #test het model voor accuracy
 from sklearn.metrics import accuracy_score
 
-dataset = pd.read_excel(r'C:\Users\mkolb\Documents\Word documents\HBO ICT\Semester 3\datasets\MLkindplaats_kids_testset.xlsx')
+server = 'tcp:marlies.database.windows.net'
+database = 'rocketdb2'
+username = 'rocketadmin'
+password = 'Marlies123!'
+driver= '{ODBC Driver 17 for SQL Server}'
+conn = pyodbc.connect('DRIVER=' + driver + ';SERVER=' +
+    server + ';PORT=1433;DATABASE=' + database +
+    ';UID=' + username + ';PWD=' + password)
+
+cursor = conn.cursor()
+
+query = "SELECT * FROM [dbo].[MLkindplaats_kids_testset]"
+dataset = pd.read_sql(query, conn)
+
 print(dataset.head())
 
 # Splits de gegevens in een trainings- en testset
