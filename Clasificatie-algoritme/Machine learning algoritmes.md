@@ -44,4 +44,6 @@ Accuracy op testdata 94% - 97%
 ##Advies
 Decision tree is het beste te gebruiken voor het classificeren van kans en doorstroomwijken. 
 
+# Sla het model op in het bestand 'decision_tree_model.pkl'
+joblib.dump(model, 'decision_tree_model.pkl') Dit moet toegevoegd worden aan de ml code om de code toe te passen
 
