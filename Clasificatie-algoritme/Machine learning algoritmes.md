@@ -42,6 +42,6 @@ zodat het gemakkelijk is om nieuwe datapunten te classificeren.
 Accuracy op testdata 94% - 97%
 
 ##Advies
-
+Decision tree is het beste te gebruiken voor het classificeren van kans en doorstroomwijken. 
 
 
