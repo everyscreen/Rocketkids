@@ -46,9 +46,23 @@ joblib.dump(model, 'decision_tree_model.pkl')
 model = joblib.load('decision_tree_model.pkl')
 
 # Laad de nieuwe gegevens in en bereid deze voor
-new_data = pd.read_excel(r"C:\Users\mkolb\Documents\Word documents\HBO ICT\Semester 3\datasets\MLkindplaats_kids_officieel.xlsx")
+server = 'tcp:marlies.database.windows.net'
+database = 'rocketdb2'
+username = 'rocketadmin'
+password = 'Marlies123!'
+driver= '{ODBC Driver 17 for SQL Server}'
+conn = pyodbc.connect('DRIVER=' + driver + ';SERVER=' +
+    server + ';PORT=1433;DATABASE=' + database +
+    ';UID=' + username + ';PWD=' + password)
 
+cursor = conn.cursor()
+
+query = "SELECT * FROM [dbo].[MLkindplaats_kids_officieel]"
+new_data = pd.read_sql(query, conn)
+
+#eerste kolom leest hij niet omdat het een string is, deze weghalen.
 new_data = new_data.iloc[:, 1:3]
+
 # Voorspel de waarden op basis van de nieuwe gegevens
 predictions = model.predict(new_data)
 print(predictions)
@@ -67,5 +81,6 @@ def save_predictions(predictions, data, data_path):
     # Sla de gewijzigde dataset op in een nieuw bestand
     save_data(data, data_path)
 
+# voor nu opgeslagen op mijn eigen device, connectie naar server en daar uploaden kostte teveel tijd om uit te zoeken hoe dit moest, kwam in tijdnood.
 save_predictions(predictions, new_data, r"C:\Users\mkolb\Documents\Word documents\HBO ICT\Semester 3\datasets\voorspelling2.csv")
 
