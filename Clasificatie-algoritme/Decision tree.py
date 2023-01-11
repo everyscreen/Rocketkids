@@ -43,3 +43,30 @@ print("accuracy", accuracy_score(y_test, predictions))
 
 joblib.dump(model, 'decision_tree_model.pkl')
 
+#nieuw model trainen
+model = joblib.load('decision_tree_model.pkl')
+
+# Laad de nieuwe gegevens in en bereid deze voor
+new_data = pd.read_excel(r"C:\Users\mkolb\Documents\Word documents\HBO ICT\Semester 3\datasets\MLkindplaats_kids_officieel.xlsx")
+
+new_data = new_data.iloc[:, 1:3]
+# Voorspel de waarden op basis van de nieuwe gegevens
+predictions = model.predict(new_data)
+print(predictions)
+
+# Bewaar de voorspellingen voor toekomstig gebruik
+# makkelijkste manier via een function zodat beide datasets gecombineerd worden 
+
+def save_data(data, data_path):
+    # Sla de gegevens op in het opgegeven bestand of database      
+    data.to_csv(data_path)
+    
+def save_predictions(predictions, data, data_path):
+    # Voeg de voorspellingen toe aan de dataset
+    data['predictions'] = predictions
+
+    # Sla de gewijzigde dataset op in een nieuw bestand
+    save_data(data, data_path)
+
+save_predictions(predictions, new_data, r"C:\Users\mkolb\Documents\Word documents\HBO ICT\Semester 3\datasets\voorspelling2.csv")
+
