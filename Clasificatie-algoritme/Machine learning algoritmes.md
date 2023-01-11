@@ -1,29 +1,55 @@
 ##Inleiding
-Waarom machine learning?
+Wat is het probleem wat ik probeer op te lossen
+
+Vanuit WIJZIJNJONG kwam de opdracht om wijken te classificeren in kanswijken en doorstroomwijken
+Kanswijk:
+Doorstroomwijk:
+
+###Waarom machine learning?
 Het is te arbeidsintensief om van alle wijken een berekening te gaan maken en deze te classificeren. 
+Machine learning kan worden gebruikt om complexe processen te vereenvoudigen en ze toegankelijker te maken.
 Met een kleine testdataset moet het met het juiste model eenvoudig te berekenen zijn en dat scheelt veel werk. 
 
-Welk probleem wordt opgelost?
-
 ## uitleg maken over de verschillende codes en modellen
+###Dataset
 
-Hoe is de testdata samengesteld?
+Om de juiste classificatie te maken zijn er een aantal gegevens nodig.
+    - Lijst van de gemeenten in nederland
+    - Aantal jongeren per gemeente
+    - Aantal kindplaatsen per gemeente
+
+Deze gegevens staan in de dataset landelijk registratie kinderdagopvang en je kunt zelf via .. een dataset samenstellen met daarin relevante gegevens van de inwoners per gemeente. 
+Ik heb de volgende query gebruikt om de juiste gegevens uit de dataset te halen:
+
+- hoe heb ik de dataset samengesteld
 Dataset LRK. Query gemaakt om het aantal kindplaatsen per gemeente te berekenen. 
 Deze geexporteerd en samengevoegd met het aantal kinderen per gemeente
 
+Vanuit de interviews met WIJZIJNJONG en de requirements die zijn opgesteld door KIFO zag ik dat de verhouding kinderen ten op zichte van kindplaatsen /3 was
+Alles boven 1:3 wordt geclassificeert als Kanswijk
+Alles onder 1:3 wordt geclassificeert als Doorstroomwijk
 
-
-Hoe te gebruiken met de daadwerkelijke data?
+Ik heb een testdataset opgesteld waarin ik mockdata heb aangemaakt met de juiste verhouding. Hierop heb ik onderstaande algorites getest in Python
 
 ##stats
-gemaakt met visual studio 
-versie
-Python versie.. 
+Bijgevoegde codes zijn gemaakt in Visual Studio
+Python versie 3.10 (64-bit)
 
-Packages welke nodig zijn voor de uitvoering
+De volgende python packages moeten zijn geinstalleerd om de code te laten werken
+(installatie kan via cmd, pip install (naam package))
+pandas
+scikit-learn 
+numpy 
+scipy 
+matplotlib
+joblib
+pyodbc
 
 ## Link naar de database
-
+server: marlies.database.windows.net
+database:rocketdb2
+user:rocketadmin@marlies
+password:Marlies123!
 
 ## Algoritmes
 Er zijn verschillende machine learning-algoritmes die geschikt zijn voor het binair classificeren van data.
