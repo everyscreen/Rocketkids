@@ -85,5 +85,6 @@ def save_predictions(predictions, data, data_path):
 save_predictions(predictions, new_data, r"C:\Users\mkolb\Documents\Word documents\HBO ICT\Semester 3\datasets\voorspelling2.csv")
 
 #connectie met database opslaan en sluiten
+cursor.close()
 conn.commit()
 conn.close()
