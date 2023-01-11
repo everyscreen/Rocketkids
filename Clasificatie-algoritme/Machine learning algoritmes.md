@@ -10,7 +10,6 @@ Het is te arbeidsintensief om van alle wijken een berekening te gaan maken en de
 Machine learning kan worden gebruikt om complexe processen te vereenvoudigen en ze toegankelijker te maken.
 Met een kleine testdataset moet het met het juiste model eenvoudig te berekenen zijn en dat scheelt veel werk. 
 
-## uitleg maken over de verschillende codes en modellen
 ###Dataset
 
 Om de juiste classificatie te maken zijn er een aantal gegevens nodig.
