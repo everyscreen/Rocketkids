@@ -84,3 +84,6 @@ def save_predictions(predictions, data, data_path):
 # voor nu opgeslagen op mijn eigen device, connectie naar server en daar uploaden kostte teveel tijd om uit te zoeken hoe dit moest, kwam in tijdnood.
 save_predictions(predictions, new_data, r"C:\Users\mkolb\Documents\Word documents\HBO ICT\Semester 3\datasets\voorspelling2.csv")
 
+#connectie met database opslaan en sluiten
+conn.commit()
+conn.close()
