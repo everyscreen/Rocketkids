@@ -38,17 +38,26 @@ Python versie 3.10 (64-bit)
 De volgende python packages moeten zijn geinstalleerd om de code te laten werken
 (installatie kan via cmd, pip install (naam package))
 pandas
+
 scikit-learn 
+
 numpy 
+
 scipy 
+
 matplotlib
+
 joblib
+
 pyodbc
 
 ## Link naar de database
 server: marlies.database.windows.net
+
 database:rocketdb2
+
 user:rocketadmin@marlies
+
 password:Marlies123!
 
 ## Algoritmes
