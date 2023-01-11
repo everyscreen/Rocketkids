@@ -73,7 +73,7 @@ en te classificeren op basis van de meerderheid van de categorieën van deze pun
 
 Accuracy op testdata: 63% - 68 %
 
-###Logistische regressie
+###Logistic regression
 Dit is een lineaire model dat wordt gebruikt om de kans te berekenen dat een datapunt tot een bepaalde categorie behoort.
 Het is een populaire keuze voor binair classificeren omdat het gemakkelijk te begrijpen is en snel te trainen is.
 
