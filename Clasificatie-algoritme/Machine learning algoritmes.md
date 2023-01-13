@@ -98,5 +98,5 @@ Uit deze testen blijkt dat de decision tree het beste algoritme is om te gebruik
 Het model is opgeslagen als het bestand 'decision_tree_model.pkl'. Deze is toegevoegd aan de repository.
 In de python decision tree repository heb ik de code uitgebreid met dit bestand om de officiele data te classificeren.
 
-
+#####Autheur: Marlies Kolbeek
 
