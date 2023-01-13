@@ -88,3 +88,5 @@ save_predictions(predictions, new_data, r"C:\Users\mkolb\Documents\Word document
 cursor.close()
 conn.commit()
 conn.close()
+
+#Autheur: Marlies Kolbeek
