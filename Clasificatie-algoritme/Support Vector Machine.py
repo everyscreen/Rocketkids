@@ -43,3 +43,5 @@ predictions = model.predict(X_test)
 # Bepaal de nauwkeurigheid van het model
 accuracy = model.score(X_test, y_test)
 print('Accuracy:', accuracy)
+
+#Autheur: Marlies Kolbeek
