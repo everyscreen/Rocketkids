@@ -64,3 +64,5 @@ accuracy = accuracy_score(y_train, y_pred)
 
 # Print the accuracy score
 print("Accuracy: {:.2f}".format(accuracy))
+
+#Autheur: Marlies Kolbeek
