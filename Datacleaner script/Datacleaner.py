@@ -19,3 +19,5 @@ df_new = df.replace(to_replace = '^\.$', value = '' , regex = True)
 print("changes", df.count().sum() - (df == df_new).astype(int).sum().sum())
 print(df_new.head(26))
 conn.close()
+
+#Autheur: Marlies Kolbeek
