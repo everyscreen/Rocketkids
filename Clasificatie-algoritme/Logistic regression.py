@@ -41,3 +41,5 @@ predictions = logmodel.predict(x_test)
 print(classification_report(y_test, predictions))
 print(confusion_matrix(y_test, predictions))
 print(accuracy_score(y_test, predictions))
+
+#Autheur: Marlies Kolbeek
